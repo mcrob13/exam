@@ -1,7 +1,6 @@
 document.querySelectorAll('.profile__bar').forEach((bar, index) => {
   const fill = bar.querySelector('.profile__bar-fill');
 
-  // При загрузке страницы восстанавливаем ширину из localStorage
   const savedWidth = localStorage.getItem(`profileBarWidth-${index}`);
   if (savedWidth) {
     fill.style.width = savedWidth;
@@ -15,7 +14,6 @@ document.querySelectorAll('.profile__bar').forEach((bar, index) => {
 
     fill.style.width = widthStr;
 
-    // Сохраняем ширину в localStorage
     localStorage.setItem(`profileBarWidth-${index}`, widthStr);
   };
 

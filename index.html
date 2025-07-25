@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vite App</title>
+        <title>Resume online</title>
         <link rel="stylesheet" href="css/style.css" class="css">
+        <link rel="stylesheet" href="css/animation.css" class="css">
+        <link rel="stylesheet" href="css/media.css" class="css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -36,11 +37,6 @@
                 <button class="btn header__btn btn-reset" id="loginBtn">
                     Make PDF
                 </button>
-                <button class="btn-reset header_burger burger">
-                    <span class="burger__line"></span>
-                    <span class="burger__line"></span>
-                    <span class="burger__line"></span>
-                </button>
             </div>
         </header>
         <main class="main">
@@ -54,32 +50,32 @@
                                 <div class="profile__item profile__item-user">
                                 <div class="profile__text flex">
                                     <div class="profile__text_top">
-                                        <div class="profile__hello" contenteditable="true">Hello 👋🏻 I’m</div>
+                                        <div class="profile__hello ripple-container" contenteditable="true">Hello 👋🏻 I’m</div>
                                     </div>
                                     <div class="profile__text_bottom">
-                                        <div class="profile__name" contenteditable="true">Karthik SR</div>
-                                        <div class="profile__post" contenteditable="true">UX/UI Designer</div>
+                                        <div class="profile__name ripple-container" contenteditable="true">Karthik SR</div>
+                                        <div class="profile__post ripple-container" contenteditable="true">UX/UI Designer</div>
                                     </div>
                                 </div>
                                 </div>
                             </div>
                             <div class="profile__item profile__item-languages">
-                                <h2 class="profile__heading" contenteditable="true">Languages</h2>
+                                <h2 class="profile__heading ripple-container" contenteditable="true">Languages</h2>
                                 <div class="profile__languages">
                                 <div class="profile__language">
-                                    <span class="profile__language_name" contenteditable="true">English</span>
+                                    <span class="profile__language_name ripple-container" contenteditable="true">English</span>
                                     <div class="profile__bar">
                                     <div class="profile__bar-fill" style="width: 80%;"></div>
                                     </div>
                                 </div>
                                 <div class="profile__language">
-                                    <span class="profile__language_name" contenteditable="true">Malayalam</span>
+                                    <span class="profile__language_name ripple-container" contenteditable="true">Malayalam</span>
                                     <div class="profile__bar">
                                     <div class="profile__bar-fill" style="width: 60%;"></div>
                                     </div>
                                 </div>
                                 <div class="profile__language">
-                                    <span class="profile__language_name" contenteditable="true">Hindi</span>
+                                    <span class="profile__language_name ripple-container" contenteditable="true">Hindi</span>
                                     <div class="profile__bar">
                                     <div class="profile__bar-fill" style="width: 40%;"></div>
                                     </div>
@@ -93,86 +89,86 @@
                 <div class="container">
                     <div class="experience__wrapper">
 
-                        <di class="experience__main">
+                        <div class="experience__main">
                             <h2 class="experience__heading">Experience</h2>
 
                             <div class="job-card job-card--current">
                                 <div class="job-card__header">
-                                    <span class="job-card__period" contenteditable="true">Jun. 2023 - Present</span>
+                                    <span class="job-card__period ripple-container" contenteditable="true">Jun. 2023 - Present</span>
                                     <span class="job-card__badge">most recent</span>
                                 </div>
-                                <h3 class="job-card__title" contenteditable="true">Marketing Manager</h3>
-                                <p class="job-card__meta" contenteditable="true">Pankayam | Full-time</p>
+                                <h3 class="job-card__title ripple-container" contenteditable="true">Marketing Manager</h3>
+                                <p class="job-card__meta ripple-container" contenteditable="true">Pankayam | Full-time</p>
                                 <ul class="job-card__duties">
-                                    <li class="job-card__duty" contenteditable="true">Strategy development and planning of campaigns that promote the business and generate genuine traffic</li>
-                                    <li class="job-card__duty" contenteditable="true">SEO Content Creation for Blogs, Website, Social media</li>
+                                    <li class="job-card__duty ripple-container" contenteditable="true">Strategy development and planning of campaigns that promote the business and generate genuine traffic</li>
+                                    <li class="job-card__duty ripple-container" contenteditable="true">SEO Content Creation for Blogs, Website, Social media</li>
                                 </ul>
                             </div>
 
                             <div class="job-card">
                                 <div class="job-card__header">
-                                    <span class="job-card__period" contenteditable="true">2017 - Present</span>
+                                    <span class="job-card__period ripple-container" contenteditable="true">2017 - Present</span>
                                 </div>
-                                <h3 class="job-card__title" contenteditable="true">Graphic / Web designer</h3>
-                                <p class="job-card__meta" contenteditable="true">Freelance</p>
+                                <h3 class="job-card__title ripple-container" contenteditable="true">Graphic / Web designer</h3>
+                                <p class="job-card__meta ripple-container" contenteditable="true">Freelance</p>
                                 <ul class="job-card__duties">
-                                    <li class="job-card__duty" contenteditable="true">Development of internal projects from scratch, product design of brands</li>
-                                    <li class="job-card__duty" contenteditable="true">Landing page, webapps and hybrid apps</li>
-                                    <li class="job-card__duty" contenteditable="true">Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.</li>
+                                    <li class="job-card__duty ripple-container" contenteditable="true">Development of internal projects from scratch, product design of brands</li>
+                                    <li class="job-card__duty ripple-container" contenteditable="true">Landing page, webapps and hybrid apps</li>
+                                    <li class="job-card__duty ripple-container" contenteditable="true">Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.</li>
                                 </ul>
                             </div>
 
                             <div class="job-card">
                                 <div class="job-card__header">
-                                    <span class="job-card__period" contenteditable="true">Sep. 2021 - Jun. 2023</span>
+                                    <span class="job-card__period ripple-container" contenteditable="true">Sep. 2021 - Jun. 2023</span>
                                 </div>
-                                <h3 class="job-card__title" contenteditable="true">Legal Assistant</h3>
-                                <p class="job-card__meta" contenteditable="true">Law Firm | Intern</p>
+                                <h3 class="job-card__title ripple-container" contenteditable="true">Legal Assistant</h3>
+                                <p class="job-card__meta ripple-container" contenteditable="true">Law Firm | Intern</p>
                                 <ul class="job-card__duties">
-                                    <li class="job-card__duty" contenteditable="true">Provide administrative support to lawyer and enhance office effectiveness</li>
-                                    <li class="job-card__duty" contenteditable="true">Handle communication with clients, witnesses etc.</li>
-                                    <li class="job-card__duty" contenteditable="true">Prepare case briefs and summarize depositions, interrogatories and testimony</li>
+                                    <li class="job-card__duty ripple-container" contenteditable="true">Provide administrative support to lawyer and enhance office effectiveness</li>
+                                    <li class="job-card__duty ripple-container" contenteditable="true">Handle communication with clients, witnesses etc.</li>
+                                    <li class="job-card__duty ripple-container" contenteditable="true">Prepare case briefs and summarize depositions, interrogatories and testimony</li>
                                 </ul>
                             </div>
-                        </di>
+                        </div>
 
                         <aside class="experience__sidebar">
                             <h2 class="experience__heading">Tools</h2>
 
-                            <div class="tools-group">
+                            <div class="tools-group flex">
                                 <div class="tools-group__header">
                                     <span class="tools-group__title">design</span>
                                 </div>
                                 <div class="tools-group__list">
-                                    <div class="tools-group__item"><img src="img/logoFigma.svg" alt="Figma"></div>
-                                    <div class="tools-group__item"><img src="img/🦆 icon _adobe photoshop_.svg" alt="Photoshop"></div>
-                                    <div class="tools-group__item"><img src="img/🦆 icon _adobe illustrator_.svg" alt="Illustrator"></div>
-                                    <div class="tools-group__item"><img src="img/🦆 icon _adobe premiere_.svg" alt="Premiere Pro"></div>
-                                    <div class="tools-group__item"><img src="img/logoNotion.svg" alt="Notion"></div>
-                                    <div class="tools-group__item"><img src="img/logoMeet.svg" alt="Google Meet"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/logoFigma.svg" alt="Figma"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/🦆 icon _adobe photoshop_.svg" alt="Photoshop"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/🦆 icon _adobe illustrator_.svg" alt="Illustrator"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/🦆 icon _adobe premiere_.svg" alt="Premiere Pro"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/logoNotion.svg" alt="Notion"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/logoMeet.svg" alt="Google Meet"></div>
                                 </div>
                             </div>
 
-                            <div class="tools-group">
+                            <div class="tools-group flex">
                                 <div class="tools-group__header">
                                     <span class="tools-group__title">no-code</span>
                                 </div>
                                 <div class="tools-group__list">
-                                    <div class="tools-group__item"><img src="img/logoZapìer 1.svg" alt="Zapier"></div>
-                                    <div class="tools-group__item"><img src="img/logoWebflow.svg" alt="Webflow"></div>
-                                    <div class="tools-group__item"><img src="img/logoFramer.svg" alt="Framer"></div>
-                                    <div class="tools-group__item"><img src="img/logoWordpress.svg" alt="WordPress"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/logoZapìer 1.svg" alt="Zapier"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/logoWebflow.svg" alt="Webflow"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/logoFramer.svg" alt="Framer"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/logoWordpress.svg" alt="WordPress"></div>
                                 </div>
                             </div>
 
-                            <div class="tools-group">
+                            <div class="tools-group flex">
                                 <div class="tools-group__header">
                                     <span class="tools-group__title">artificial intelligence</span>
                                 </div>
                                 <div class="tools-group__list">
-                                    <div class="tools-group__item"><img src="img/logoChatGPT 1.svg" alt="OpenAI"></div>
-                                    <div class="tools-group__item"><img src="img/logoCopilot 1.svg" alt="Google AI"></div>
-                                    <div class="tools-group__item"><img src="img/logoMidjourney 1.svg" alt="Midjourney"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/logoChatGPT 1.svg" alt="OpenAI"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/logoCopilot 1.svg" alt="Google AI"></div>
+                                    <div class="tools-group__item ripple-container"><img src="img/logoMidjourney 1.svg" alt="Midjourney"></div>
                                 </div>
                             </div>
                         </aside>
@@ -188,57 +184,57 @@
                             <div class="education__cards">
                                 <article class="edu-card edu-card--highlight">
                                     <div class="edu-card__header">
-                                        <span class="edu-card__year" contenteditable="true">2023</span>
-                                        <span class="edu-card__icon">💛</span>
+                                        <span class="edu-card__year ripple-container" contenteditable="true">2023</span>
+                                        <div class="tools-group__item ripple-container"><img src="img/Vector.svg" alt="WordPress"></div>
                                     </div>
-                                    <h3 class="edu-card__title" contenteditable="true">UI/UX</h3>
-                                    <p class="edu-card__tags" contenteditable="true">
+                                    <h3 class="edu-card__title ripple-container" contenteditable="true">UI/UX</h3>
+                                    <p class="edu-card__tags ripple-container" contenteditable="true">
                                         #UX #UI #research #DesignSystem #UI #wireframing #figma #Ux
                                     </p>
-                                    <span class="edu-card__source" contenteditable="true">Coursera</span>
+                                    <div class="edu-card__source ripple-container" contenteditable="true">Coursera</div>
                                 </article>
                                 <article class="edu-card">
                                     <div class="edu-card__header">
-                                        <span class="edu-card__year" contenteditable="true">2017 – 2022</span>
+                                        <span class="edu-card__year ripple-container" contenteditable="true">2017 – 2022</span>
                                     </div>
-                                    <h3 class="edu-card__title" contenteditable="true">Law</h3>
-                                    <p class="edu-card__tags" contenteditable="true">
+                                    <h3 class="edu-card__title ripple-container" contenteditable="true">Law</h3>
+                                    <p class="edu-card__tags ripple-container" contenteditable="true">
                                         #law #legalStudies #contracts #internationalLaws
                                     </p>
-                                    <span class="edu-card__source" contenteditable="true">University of Kerala</span>
+                                    <div class="edu-card__source ripple-container" contenteditable="true">University of Kerala</div>
                                 </article>
                                 <article class="edu-card">
                                     <div class="edu-card__header">
-                                        <span class="edu-card__year" contenteditable="true">2017</span>
+                                        <span class="edu-card__year ripple-container" contenteditable="true">2017</span>
                                     </div>
-                                    <h3 class="edu-card__title" contenteditable="true">Graphic design</h3>
-                                    <p class="edu-card__tags" contenteditable="true">
+                                    <h3 class="edu-card__title ripple-container" contenteditable="true">Graphic design</h3>
+                                    <p class="edu-card__tags ripple-container" contenteditable="true">
                                         #branding #web #illustration #adobe
                                     </p>
-                                    <span class="edu-card__source" contenteditable="true">Coursera</span>
+                                    <div class="edu-card__source ripple-container" contenteditable="true">Coursera</div>
                                 </article>
                             </div>
                         </div>
 
                         <aside class="education__sidebar">
                             <div class="interests">
-                                <h2 class="interests__title" contenteditable="true">Interests</h2>
+                                <h2 class="interests__title ripple-container" contenteditable="true">Interests</h2>
                                 <div class="interests__tags">
-                                    <span class="interests__tag" contenteditable="true">branding</span>
-                                    <span class="interests__tag" contenteditable="true">design</span>
-                                    <span class="interests__tag" contenteditable="true">photography</span>
-                                    <span class="interests__tag" contenteditable="true">artificial intelligence</span>
-                                    <span class="interests__tag" contenteditable="true">illustration</span>
-                                    <span class="interests__tag" contenteditable="true">typography</span>
-                                    <span class="interests__tag" contenteditable="true">social networks</span>
-                                    <span class="interests__tag" contenteditable="true">research</span>
-                                    <span class="interests__tag" contenteditable="true">dron pilot</span>
-                                    <span class="interests__tag" contenteditable="true">games</span>
+                                    <span class="interests__tag ripple-container" contenteditable="true">branding</span>
+                                    <span class="interests__tag ripple-container" contenteditable="true">design</span>
+                                    <span class="interests__tag ripple-container" contenteditable="true">photography</span>
+                                    <span class="interests__tag ripple-container" contenteditable="true">artificial intelligence</span>
+                                    <span class="interests__tag ripple-container" contenteditable="true">illustration</span>
+                                    <span class="interests__tag ripple-container" contenteditable="true">typography</span>
+                                    <span class="interests__tag ripple-container" contenteditable="true">social networks</span>
+                                    <span class="interests__tag ripple-container" contenteditable="true">research</span>
+                                    <span class="interests__tag ripple-container" contenteditable="true">dron pilot</span>
+                                    <span class="interests__tag ripple-container" contenteditable="true">games</span>
                                 </div>
                             </div>
                             <div class="chat-card">
-                                <h3 class="chat-card__title" contenteditable="true">Let's chat! I'm ready to work on exciting projects</h3>
-                                <a href="mailto:srkarthik.designscape@gmail.com" class="chat-card__email" contenteditable="true">srkarthik.designscape@gmail.com</a>
+                                <h3 class="chat-card__title ripple-container" contenteditable="true">Let's chat! I'm ready to work on exciting projects</h3>
+                                <div href="mailto:srkarthik.designscape@gmail.com" class="chat-card__email ripple-container" contenteditable="true">srkarthik.designscape@gmail.com</div>
                             </div>
                         </aside>
 
@@ -254,13 +250,6 @@
                 <button class="btn btn-reset footer__btn" id="resetBtn">Reset Progress</button>
             </div>
         </footer>
-      
-
-
-
-
-
-        <div id="app"></div>
         <script type="module" src="./js/main.js"></script>
         <script type="module" src="./js/id.js"></script>
         <script type="module" src="./js/id2.js"></script>
@@ -271,8 +260,5 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-
-
     </body>
 </html>

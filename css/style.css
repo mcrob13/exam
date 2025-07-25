@@ -53,15 +53,15 @@ body {
   padding: 36px 0;
   border-bottom: 1px solid #C4C4C4;
   background-color: #fff;
-  top: 0;          /* Прижимаем к верхнему краю */
+  top: 0;
   left: 0;
-  width: 100%;     /* На всю ширину экрана */
-  background-color: #fff; /* Цвет фона (как у вашего header) */
+  width: 100%;
+  background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .main {
-  padding-top: 30px; /* Высота вашего header + немного */
+  padding-top: 30px;
 }
 
 .header__container {
@@ -133,7 +133,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   padding: 10px 20.5px;
-  width: 120px;
+  max-width: 120px;
   height: 40px;
   background-color: #4F46E5	;
   border-radius: 3px;
@@ -173,7 +173,6 @@ body {
   opacity: 0;
 }
 
-/*profile*/
 /* profile */
 
 .profile__grid {
@@ -200,6 +199,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 120px;
 }
 
 .profile__photo {
@@ -215,56 +215,54 @@ body {
   border-radius: 12px;
   padding: 12px;
   overflow-wrap: break-word;
-  word-break: break-all;
 }
 
 .profile__text {
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
+
 
 .profile__hello {
   font-weight: 500;
-  font-size: clamp(0.5rem, 1vw + 0.5rem, 2rem);
-  margin-top: 1rem;
-  margin-left: 0.7rem;
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 1.2rem);
+  margin: 0 0 0.2rem 0.7rem;
   line-height: 150%;
   color: #000;
 }
 
 .profile__name {
   font-weight: 600;
-  font-size: clamp(0.5rem, 2vw + 0.5rem, 2rem);
+  font-size: clamp(1.2rem, 2vw + 0.5rem, 2.5rem);
   line-height: 104%;
   color: #000;
-  margin-left: 0.7rem;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.2rem 0.7rem;
 }
 
 .profile__post {
   font-weight: 500;
-  font-size: clamp(0.5rem, 2vw + 0.5rem, 2rem);
+  font-size: clamp(0.9rem, 1.5vw + 0.5rem, 1.5rem);
   line-height: 150%;
   color: #5c5c5c;
-  margin-bottom: 1rem;
-  margin-left: 0.7rem;
+  margin: 0 0 0 0.7rem;
 }
 
 .profile__item-languages {
   background: #f0f0f0;
   border-radius: 12px;
-  padding: 12px;
+  padding: 12px 20px;
   overflow-wrap: break-word;
-  word-break: break-all;
 }
 
 .profile__heading {
   margin-top: 1rem;
   font-weight: 500;
-  font-size: clamp(0.5rem, 2vw + 0.5rem, 2rem);
+  font-size: clamp(1.1rem, 2vw + 0.5rem, 1.8rem);
   line-height: 150%;
   color: #000;
+  margin-bottom: 1.5rem;
 }
 
 .profile__language {
@@ -286,19 +284,18 @@ body {
   flex: 1;
   height: 20px;
   background-color: #ddd;
-  border-radius: 3px;
+  border-radius: 10px;
   margin-left: 10px;
   position: relative;
-  cursor: pointer;
+  overflow: hidden;
 }
 
 .profile__bar-fill {
   height: 100%;
   background-color: #28D979;
-  border-radius: 6px 0 0 6px;
+  border-radius: 0;
   transition: width 0.3s ease;
 }
-
 /*exp*/
 .profile__grid {
   display: grid;
@@ -411,7 +408,7 @@ body {
 
 .profile__bar-fill {
   height: 100%;
-  background-color: #28D979;
+  background-color: #28d979;
   border-radius: 6px 0 0 6px;
   transition: width 0.3s ease;
 }
@@ -435,7 +432,7 @@ body {
 .experience__wrapper {
   display: flex;
   gap: 24px;
-  align-items: stretch; /* Ensures both columns have equal height */
+  align-items: stretch;
   min-height: 0;
 }
 
@@ -447,7 +444,7 @@ body {
   gap: 24px;
   background-color: #f0f0f0;
   border-radius: 12px;
-  padding: 20px; /* Добавлен отступ снизу для видимости серого фона */
+  padding: 20px;
 }
 
 .experience__sidebar {
@@ -458,7 +455,7 @@ body {
   gap: 24px;
   background-color: #f0f0f0;
   border-radius: 12px;
-  padding: 1rem 3rem; /* Добавлен отступ снизу для видимости серого фона */
+  padding: 1rem 3rem;
 }
 
 .experience__heading {
@@ -476,7 +473,7 @@ body {
   padding: 24px;
   border-radius: var(--border-radius-large);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  flex: 1 0 auto; /* Allows the card to grow with content */
+  flex: 1 0 auto;
   width: 100%;
   min-height: auto;
   overflow-wrap: break-word;
@@ -484,7 +481,7 @@ body {
 }
 
 .job-card--current {
-  background-color: var(--card-bg-accent);
+  background-color: #28d979;
   color: var(--text-color-light);
 }
 
@@ -562,19 +559,20 @@ body {
 /* tools*/ 
 .tools-group {
   background-color: var(--card-bg-light);
-  padding: 30px 20px;
+  padding: 30px;
   border-radius: var(--border-radius-large);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  flex: 1 0 auto; /* Allows the tools group to grow with content */
   width: 100%;
   position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .tools-group__header {
   position: absolute;
-  top: calc(var(--title-height) / -2);; /* Половина предполагаемой высоты заголовка (около 24px) */
+  top: calc(var(--title-height) / -2);
   left: 50%;
-  transform: translateX(-50%); /* Центрируем по горизонтали */
+  transform: translateX(-50%);
   width: max-content;
 }
 
@@ -608,24 +606,16 @@ body {
   display: block;
 }
 
-/*educ*/
-
-/* ... other existing styles from your request ... */
-
-/* NEW STYLES FOR THE EDUCATION/INTERESTS SECTION */
-
-/* Main wrapper for the two columns */
 .education__wrapper {
     display: flex;
-    align-items: stretch; /* This makes the columns equal height */
-    gap: 24px; /* Fixed gap between left and right columns */
-    flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+    align-items: stretch;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
-/* Left Column (Education) */
 .education__main {
-    flex: 1; /* Allows the block to grow */
-    min-width: 300px; /* Prevents the block from getting too small */
+    flex: 1;
+    min-width: 300px;
     background-color: #f0f0f0;
     border-radius: 24px;
     padding: 32px;
@@ -640,12 +630,11 @@ body {
 
 .education__cards {
     display: grid;
-    gap: 20px; /* Space between education cards */
+    gap: 20px;
     overflow-wrap: break-word;
     word-break: break-all;
 }
 
-/* Styling for individual education cards */
 .edu-card {
     background-color: #fff;
     border-radius: 16px;
@@ -654,7 +643,7 @@ body {
 }
 
 .edu-card--highlight {
-    background-color: #32d296;
+    background-color: #28d979;
     color: #1c1c1c;
 }
 
@@ -681,7 +670,7 @@ body {
     margin-bottom: 16px;
     color: #555;
     line-height: 1.5;
-    word-spacing: 8px; /* Adds space between hashtags */
+    word-spacing: 8px;
 }
 
 .edu-card--highlight .edu-card__tags {
@@ -698,21 +687,19 @@ body {
 }
 
 
-/* Right Column (Sidebar) */
 .education__sidebar {
-    flex: 1; /* Allows the block to grow */
+    flex: 1;
     min-width: 300px;
     display: flex;
-    flex-direction: column; /* Stacks interests and chat vertically */
-    gap: 24px; /* Space between interests and chat blocks */
+    flex-direction: column;
+    gap: 24px;
 }
 
-/* Interests Block */
 .interests {
     background-color: #f0f0f0;
     border-radius: 24px;
     padding: 32px;
-    flex-grow: 1; /* Allows this block to fill available space if needed */
+    flex-grow: 1;
     overflow-wrap: break-word;
     word-break: break-all;
 }
@@ -727,7 +714,7 @@ body {
 .interests__tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px; /* Space between tags */
+    gap: 12px;
 }
 
 .interests__tag {
@@ -741,7 +728,7 @@ body {
 
 /* Chat Block */
 .chat-card {
-    background-color: #1C1C1C; /* Black as requested */
+    background-color: #1C1C1C;
     color: #fff;
     border-radius: 24px;
     padding: 32px;
@@ -757,7 +744,7 @@ body {
 
 .chat-card__email {
     font-size: 16px;
-    word-break: break-all; /* Prevents long email from overflowing */
+    word-break: break-all;
 }
 
 
@@ -778,6 +765,6 @@ body {
 
 .footer__btn {
   width: 80%;
-  min-height: auto;
+  min-height: 70px;
 }
 

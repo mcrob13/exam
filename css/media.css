@@ -1,0 +1,87 @@
+
+@media (max-width: 992px) {
+    .profile__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience__wrapper {
+        flex-direction: column;
+    }
+
+    .experience__sidebar {
+        width: 100%;
+    }
+
+    .education__wrapper {
+        flex-direction: column;
+    }
+
+    .education__sidebar {
+        width: 100%;
+    }
+
+    .chat-card {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header__logo {
+        margin-right: auto;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .profile__heading {
+        font-size: 1.5rem;
+    }
+
+    .job-card, .edu-card {
+        padding: 16px;
+    }
+
+    .experiences__sidebar {
+        display: none;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__nav {
+        display: none;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header__btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .profile__photo {
+        height: auto;
+    }
+
+    .profile__item-user {
+        padding: 8px;
+    }
+
+    .tools-group__item {
+        width: 40px;
+        height: 40px;
+    }
+
+    .interests__tag {
+        font-size: 12px;
+    }
+}

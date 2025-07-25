@@ -1,38 +1,55 @@
-document.getElementById('loginBtn').addEventListener('click', async () => {
+document.getElementById("loginBtn").addEventListener("click", async () => {
   const { jsPDF } = window.jspdf;
-  const main = document.querySelector('main');
+  const mainElement = document.querySelector("main");
+  const loginBtn = document.getElementById("loginBtn");
 
-  // Временно уменьшаем масштаб для красивого скриншота
-  main.style.transform = 'scale(0.75)';
-  main.style.transformOrigin = 'top left';
+  const DESKTOP_WIDTH = 1200;
 
-  // Немного подождать, чтобы отрендерилось
-  await new Promise(resolve => setTimeout(resolve, 100));
+  const originalStyle = {
+    width: mainElement.style.width,
+  };
 
-  html2canvas(main, {
-    scale: 2,
-    useCORS: true,
-    windowWidth: document.body.scrollWidth,
-    windowHeight: document.body.scrollHeight
-  }).then(canvas => {
-    const imgData = canvas.toDataURL('image/png');
-    const pdf = new jsPDF('p', 'mm', 'a4');
-    
-    const pageWidth = pdf.internal.pageSize.getWidth();
-    const pageHeight = pdf.internal.pageSize.getHeight();
+  loginBtn.disabled = true;
 
-    const ratio = Math.min(pageWidth / canvas.width, pageHeight / canvas.height);
-    const imgWidth = canvas.width * ratio;
-    const imgHeight = canvas.height * ratio;
+  try {
+    mainElement.style.width = `${DESKTOP_WIDTH}px`;
 
-    const x = (pageWidth - imgWidth) / 2;
-    const y = 10; // небольшое смещение сверху
+    await new Promise((resolve) => setTimeout(resolve, 100));
 
-    pdf.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight);
-    pdf.save('resume.pdf');
+    const canvas = await html2canvas(mainElement, {
+      scale: 2,
+      useCORS: true,
+      windowWidth: DESKTOP_WIDTH,
+      windowHeight: mainElement.scrollHeight,
+      scrollX: -window.scrollX,
+      scrollY: -window.scrollY,
+    });
 
-    // Вернуть масштаб обратно
-    main.style.transform = '';
-  });
+    const imgData = canvas.toDataURL("image/png");
+    const pdf = new jsPDF({
+      orientation: "p",
+      unit: "mm",
+      format: "a4",
+    });
+
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
+
+    // Подгоняем изображение по высоте страницы
+    const canvasAspectRatio = canvas.width / canvas.height;
+    const imgWidth = pdfHeight * canvasAspectRatio;
+    const imgHeight = pdfHeight;
+
+    const xOffset = (pdfWidth - imgWidth) / 2;
+
+    pdf.addImage(imgData, "PNG", xOffset, 0, imgWidth, imgHeight);
+    pdf.save("resume.pdf");
+  } catch (error) {
+    console.error("Error generating PDF:", error);
+    alert("Sorry, something went wrong while creating the PDF.");
+  } finally {
+    mainElement.style.width = originalStyle.width;
+    loginBtn.textContent = "Make PDF";
+    loginBtn.disabled = false;
+  }
 });
-
